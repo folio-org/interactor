@@ -26,7 +26,7 @@ export function blur(selector) {
   return find.call(this, selector)
     .do(($node) => {
       $node.dispatchEvent(
-        new Event('blur', {
+        new Event('focusout', {
           bubbles: true,
           cancelable: true
         })

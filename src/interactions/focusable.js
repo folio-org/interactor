@@ -26,7 +26,7 @@ export function focus(selector) {
   return find.call(this, selector)
     .do(($node) => {
       $node.dispatchEvent(
-        new Event('focus', {
+        new Event('focusin', {
           bubbles: true,
           cancelable: true
         })
