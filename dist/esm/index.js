@@ -898,7 +898,7 @@ function selectable(selector) {
 
 function focus(selector) {
   return find.call(this, selector)['do'](function($node) {
-    $node.dispatchEvent(new Event('focus', {
+    $node.dispatchEvent(new Event('focusin', {
       bubbles: true,
       cancelable: true
     }));
@@ -912,7 +912,7 @@ function focusable(selector) {
 
 function blur(selector) {
   return find.call(this, selector)['do'](function($node) {
-    $node.dispatchEvent(new Event('focus', {
+    $node.dispatchEvent(new Event('focusout', {
       bubbles: true,
       cancelable: true
     }));
